@@ -2,9 +2,10 @@ import express, { Request, Response, NextFunction } from "express";
 import { ProductType } from "./utils/types";
 import { ProductRepository } from "./repository/ProductRepository";
 import errorHandler from "./utils/errorHandler"; // Importa el middleware
+import {PORT} from './utils/config';
+
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
